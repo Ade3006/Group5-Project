@@ -31,12 +31,13 @@ data "terraform_remote_state" "network" {
 module "prod" {
   source = "../../modules/env"
 
-  env_name        = "prod"
-  instance_type   = "t3.medium"
-  asg_min_size    = 3
-  asg_max_size    = 4
-  bucket_name     = "my-prod-env-bucket05"
-  images_prefix   = "images/"
+  env_name         = "prod"
+  instance_type    = "t3.medium"
+  asg_min_size     = 1
+  asg_max_size     = 4
+  asg_desired_size = 3
+  bucket_name      = "my-prod-env-bucket05"
+  images_prefix    = "images/"
 
   key_name           = "vockey"
   private_subnet_ids = data.terraform_remote_state.network.outputs.private_subnet_ids

@@ -14,6 +14,10 @@ variable "asg_max_size" {
   type = number
 }
 
+variable "asg_desired_size" {
+  type = number
+}
+
 variable "bucket_name" {
   type = string
 }

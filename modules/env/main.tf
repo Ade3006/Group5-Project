@@ -63,8 +63,8 @@ resource "aws_launch_template" "this" {
               <body>
               <h1>${var.env_name} Environment Web Server</h1>
               <p>Served from Auto Scaling Group behind a shared ALB.</p>
-              <img src="/images/image1.jpg" width="300" />
-              <img src="/images/image2.jpg" width="300" />
+              <img src="https://my-dev-env-bucket05.s3.us-east-1.amazonaws.com/ilovedogs.jpg" width="300" /
+              <img src="https://my-prod-env-bucket05.s3.us-east-1.amazonaws.com/ilovecats.jpg" width="300" /
               </body>
               </html>
               EOPAGE
@@ -88,7 +88,7 @@ resource "aws_autoscaling_group" "this" {
   name                      = "asg-${var.env_name}"
   min_size                  = var.asg_min_size
   max_size                  = var.asg_max_size
-  desired_capacity          = var.asg_min_size
+  desired_capacity          = var.asg_desired_size
   health_check_type         = "ELB"
   health_check_grace_period = 120
 
