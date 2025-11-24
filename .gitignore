@@ -1,0 +1,28 @@
+# Ignore SSH private keys
+*.pem
+*.key
+*.ppk
+id_rsa
+id_ecdsa
+id_ed25519
+
+# Ignore SSH public keys (optional)
+*.pub
+
+# Terraform local state (never push this)
+*.tfstate
+*.tfstate.backup
+
+# Terraform crash logs
+crash.log
+
+# Terraform internal folder
+.terraform/
+
+# Sensitive CLI credentials
+*.tfvars
+*.tfvars.json
+
+# OS junk
+.DS_Store
+Thumbs.db
