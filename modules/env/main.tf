@@ -74,7 +74,7 @@ resource "aws_launch_template" "this" {
                     <li>Adegboyega Aromolaran</li>
                     <li>Chenyu Gao</li>
                     <li>Tony Nnamdi</li>
-                    <li>Arminder Singh</li>
+                    <li>Amrinder Singh</li>
                     <li>Uchechukwu Uzodinma Udechukwu</li>
                   </ul>
                 </body>
