@@ -59,13 +59,25 @@ resource "aws_launch_template" "this" {
 
               cat > /var/www/html/index.html <<'EOPAGE'
               <html>
-              <head><title>${var.env_name} environment</title></head>
-              <body>
-              <h1>${var.env_name} Environment Web Server</h1>
-              <p>Served from Auto Scaling Group behind a shared ALB.</p>
-              <img src="https://my-dev-env-bucket05.s3.us-east-1.amazonaws.com/ilovedogs.jpg" width="300" /
-              <img src="https://my-prod-env-bucket05.s3.us-east-1.amazonaws.com/ilovecats.jpg" width="300" /
-              </body>
+                <head>
+                  <title>${var.env_name} environment</title>
+                </head>
+                <body>
+                  <h1>${var.env_name} Environment Web Server</h1>
+                  <p>Served from Auto Scaling Group behind a shared ALB.</p>
+              
+                  <img src="/images/image1.jpg" width="300" />
+                  <img src="/images/image2.jpg" width="300" />
+              
+                  <h2>Project Team Members</h2>
+                  <ul>
+                    <li>Adegboyega Aromolaran</li>
+                    <li>Chenyu Gao</li>
+                    <li>Tony Nnamdi</li>
+                    <li>Arminder Singh</li>
+                    <li>Uchechukwu Uzodinma Udechukwu</li>
+                  </ul>
+                </body>
               </html>
               EOPAGE
 
