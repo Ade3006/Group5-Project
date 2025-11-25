@@ -2,7 +2,7 @@ terraform {
   required_version = ">= 1.3.0"
 
   backend "s3" {
-    bucket = "my-network-state-bucket05"   # create this bucket or change
+    bucket = "my-network-state-bucket05" # create this bucket or change
     key    = "network/terraform.tfstate"
     region = "us-east-1"
   }
