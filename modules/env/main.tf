@@ -66,8 +66,8 @@ resource "aws_launch_template" "this" {
                   <h1>${var.env_name} Environment Web Server</h1>
                   <p>Served from Auto Scaling Group behind a shared ALB.</p>
               
-                  <img src="https://my-dev-env-bucket05.s3.us-east-1.amazonaws.com/ilovedogs.jpg" />
-                  <img src="https://my-prod-env-bucket05.s3.us-east-1.amazonaws.com/ilovecats.jpg" />
+                  <img src="https://my-dev-env-bucket05.s3.us-east-1.amazonaws.com/ilovedogs.jpg" width="300" height="200" />
+                  <img src="https://my-prod-env-bucket05.s3.us-east-1.amazonaws.com/ilovecats.jpg" width="300" height="200" />
               
                   <h2>Project Team Members</h2>
                   <ul>
