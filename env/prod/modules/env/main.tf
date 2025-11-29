@@ -88,7 +88,7 @@ resource "aws_launch_template" "this" {
 
   tag_specifications {
     resource_type = "instance"
-    tags          = merge(local.tags, { Name = "${var.env_name}-webserver" })
+    tags          = merge(local.tags, { Name = "${var.env_name}-web" })
   }
 
   lifecycle {
@@ -114,7 +114,7 @@ resource "aws_autoscaling_group" "this" {
 
   tag {
     key                 = "Name"
-    value               = "${var.env_name}-webserver"
+    value               = "${var.env_name}-web-asg"
     propagate_at_launch = true
   }
 }
